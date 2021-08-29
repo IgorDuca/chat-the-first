@@ -1,0 +1,49 @@
+{
+    "intents": [
+        {
+            "tag": "greetings",
+            "patterns": ["iai", "oi", "oii", "eae", "boa noite", "oie", "eae", "oiii", "bom dia", "boa tarde", "opa"],
+            "responses": ["oii oiii", "oie", "oiii", "iai", "oiiii"]
+        },
+        {
+            "tag": "secondquestion",
+            "patterns": ["voce ta bem??", "tudo bem?", "tranquila?", "ta bem??"],
+            "responses": ["tudo bem", "eu to bem", "tudo, e ai, o que vc gosta de fazer?"]
+        },
+        {
+            "tag": "games",
+            "patterns": ["jogos", "jogo", "jogar", "games", "valorant", "minecraft"],
+            "responses": ["aaah, que legal, eu jogo valorant e overwatch", "gosto bastante de valorant"]
+        },
+        {
+            "tag":"state_response",
+            "patterns":["to bem", "sim e tu?", "tambem graças a deus"],
+            "responses": ["aah, que bom, to bem tbm"]
+        },
+        {
+            "tag":"action_asking",
+            "patterns": ["ta fazendo o que de bom ?", "ta fazendo oq?"],
+            "responses": ["agora nada", "nada", "nada por enquanto"]
+        },
+        {
+            "tag":"music_asking",
+            "patterns": ["to ouvindo musica", "ouvindo musica"],
+            "responses": ["que legal, eu gosto muito de pop", "eu gosto muito de musica, gosto muito de ouvir pop"]
+        },
+        {
+            "tag":"vaccine",
+            "patterns": ["vacina", "vacinei", "tomei a vacina"],
+            "responses": ["eu ainda nao me vacinei, mas devo vacinar logo", "eu devo me vacinar semana que vem"]
+        },
+        {
+            "tag":"no_results",
+            "patterns":[],
+            "responses": ["que legall, quer usar uma metadinha comigo??"]
+        },
+        {
+            "tag":"conversation_asking",
+            "patterns": ["sobre oq queria conversar?", "conversar sobre oq", "oque queria conversar"],
+            "responses": ["aaah, eu queria matar o tedio um pouco", "eu tava morrendo de tedio e queria conversar com alguem"]
+        }
+    ]
+}
