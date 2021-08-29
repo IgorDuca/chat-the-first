@@ -44,6 +44,16 @@
             "tag":"conversation_asking",
             "patterns": ["sobre oq queria conversar?", "conversar sobre oq", "oque queria conversar"],
             "responses": ["aaah, eu queria matar o tedio um pouco", "eu tava morrendo de tedio e queria conversar com alguem"]
+        },
+        {
+            "tag":"drawing_affinity",
+            "patterns":["gosto de desenhar", "desenhar"],
+            "responses":"eu também gosto muito de desenhar, mas nao sou muito boa"
+        },
+        {
+            "tag":"slpeeing",
+            "patterns":["dormir", "dormindo"],
+            "responses":["dormir é muito bom, né? kkkkkkk", "eu amo dormir, se pudesse, dormiria o dia inteirinho"]
         }
     ]
 }

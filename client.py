@@ -15,8 +15,6 @@ import numpy as np
 
 user_tokens = json.loads(open('user_tokens.json').read())
 
-unread_messages = []
-
 class Client:
     def __init__(self):
         self.driver = webdriver.Chrome("C:/Users/IGOR/chromedriver.exe")
@@ -25,7 +23,7 @@ class Client:
     def start(self):
         driver = self.driver
 
-        driver.get("https://discord.com/channels/311627659828527104/879662660092821574")
+        driver.get("https://discord.com/channels/311627659828527104/879662694335135784")
 
         driver.implicitly_wait(10)
 
@@ -37,37 +35,16 @@ class Client:
         driver.find_element_by_xpath("/html/body/div/div[2]/div/div/div/div/form/div/div/div[1]/div[2]/button[2]").click()
     def sending_group_messages(self):
 
+        driver = self.driver
+
+        driver.get("https://discord.com/channels/311627659828527104/879662694335135784")
+
         message_list = ["oie, alguém pra conversar? mandem dm", "oie, me chamem na dm, vamo conversar", "oiii, alguém pra conversar na dm? me chama aí", "oieeee, me chamem na dm, vamo cvs"]
         conversation_init_message = random.choice(message_list)
 
         driver = self.driver
 
         WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "/html/body/div/div[2]/div/div[2]/div/div/div/div[2]/div[2]/div[2]/main/form/div/div/div/div[1]/div/div[1]/div[2]"))).send_keys(conversation_init_message + Keys.RETURN)
-        
-    def gettingMessages(self):
-        driver = self.driver
-
-        driver.maximize_window()
-
-        driver.implicitly_wait(10)
-
-        element = WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "/html/body/div/div[2]/div/div[2]/div/div/div/div[2]/div[1]/nav/div[2]/div/a[3]/div")))
-        element.click()
-        
-        driver.implicitly_wait(10)
-
-        messages = driver.find_elements_by_class_name("message-2qnXI6")
-        message_length = len(messages)
-
-        print("Foram carregadas " + str(message_length) + " mensagens")
-
-    def getting_dm_count(self):
-        driver = self.driver
-
-        dms = driver.find_elements_by_class_name("listItemWrapper-KhRmzM")
-        dmCount = len(dms) - 1
-
-        return dmCount
 
     def entering_dms(self):
 
@@ -77,9 +54,13 @@ class Client:
 
         dm = driver.find_elements_by_class_name("channel-2QD9_O")
 
-        print(dm)
+        return dm
+    
+    def getting_dm_count(self, elements):
 
-        for i in dm:
+        unread_messages = []
+
+        for i in elements:
             label = str(i.get_attribute("aria-label"))
 
             if(label == 'None'):
@@ -95,40 +76,54 @@ class Client:
                     if(word == "unread,"):
                         print("Dm ainda não foi lida!")
                         unread_messages.append(i)
+
+        return unread_messages
+    
+    def sending_dm_messages(self, element):
+        driver = self.driver
+
+        def send_message():
+            element.click()
+
+            msgs = np.array(driver.find_elements_by_class_name("messageContent-2qWWxC"))
+
+            message_count = len(msgs)
+            last_message = msgs[message_count - 1].text
+
+            print("")
+            print("LAST MESSAGE")
+            print(last_message)
+            print("")
+
+            response = chatbot_response(last_message)
+
+            chat = driver.find_element_by_xpath("/html/body/div/div[2]/div/div[2]/div/div/div/div[2]/div[2]/div[2]/main/form/div/div[1]/div/div[3]/div[2]/div")
+
+            chat.send_keys(response + Keys.RETURN)
+
+            driver.get("https://discord.com/channels/@me")
+
+        send_message(element)
             
-            if(len(unread_messages) >= 1):
-                i.click()
-
-                msgs = np.array(driver.find_elements_by_class_name("messageContent-2qWWxC"))
-
-                message_count = len(msgs)
-                last_message = msgs[message_count - 1].text
-
-                print("")
-                print("LAST MESSAGE")
-                print(last_message)
-                print("")
-
-                response = chatbot_response(last_message)
-
-                chat = driver.find_element_by_xpath("/html/body/div/div[2]/div/div[2]/div/div/div/div[2]/div[2]/div[2]/main/form/div/div[1]/div/div[3]/div[2]/div")
-
-                chat.send_keys(response + Keys.RETURN)
-
-                driver.get("https://discord.com/channels/@me")
-
-                time.sleep(100)
         
 
 cl = Client()
-# cl.start()
+cl.start()
 
-# cl.entering_dms()
+dms = cl.entering_dms()
+unread_dms = cl.getting_dm_count(dms)
+count = len(unread_dms)
 
-# while len(unread_messages) < 1:
-#     cl.sending_group_messages()
-#     time.sleep(100)
-#     cl.entering_dms()
-#     time.sleep(100)
+print("")
+print("LISTA DE DM'S")
+print(dms)
+print("")
 
-# cl.entering_dms()
+print("")
+print("FORAM CARREGADAS " + str(count) + " DM'S")
+print("")
+
+while count == 0:
+    cl.sending_dm_messages(unread_dms)
+
+cl.sending_group_messages()
