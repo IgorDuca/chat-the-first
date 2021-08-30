@@ -10,6 +10,7 @@ from chatgui import chatbot_response
 import time
 import random
 import json
+import sys
 
 import numpy as np
 
@@ -23,7 +24,7 @@ class Client:
     def start(self):
         driver = self.driver
 
-        driver.get("https://discord.com/channels/311627659828527104/879662694335135784")
+        driver.get("https://discord.com/channels/706715940276142111/872163843802026074")
 
         driver.implicitly_wait(10)
 
@@ -37,14 +38,14 @@ class Client:
 
         driver = self.driver
 
-        driver.get("https://discord.com/channels/311627659828527104/879662694335135784")
+        driver.get("https://discord.com/channels/706715940276142111/872163843802026074")
 
         message_list = ["oie, alguém pra conversar? mandem dm", "oie, me chamem na dm, vamo conversar", "oiii, alguém pra conversar na dm? me chama aí", "oieeee, me chamem na dm, vamo cvs"]
         conversation_init_message = random.choice(message_list)
 
         driver = self.driver
 
-        WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "/html/body/div/div[2]/div/div[2]/div/div/div/div[2]/div[2]/div[2]/main/form/div/div/div/div[1]/div/div[1]/div[2]"))).send_keys(conversation_init_message + Keys.RETURN)
+        WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.CLASS_NAME, "slateTextArea-1Mkdgw"))).send_keys(conversation_init_message + Keys.RETURN)
 
     def entering_dms(self):
 
@@ -58,31 +59,36 @@ class Client:
     
     def getting_dm_count(self, elements):
 
-        unread_messages = []
+        driver = self.driver
 
-        for i in elements:
-            label = str(i.get_attribute("aria-label"))
+        if(driver.current_url == "https://discord.com/channels/@me"):
+            unread_messages = []
 
-            if(label == 'None'):
-                print("Ignorando dm irrelevante...")
-            else: 
-                print("")
-                print(label)
+            for i in elements:
+                label = str(i.get_attribute("aria-label"))
 
-                word_list = label.split()
-                print(word_list)
+                if(label == 'None'):
+                    print("Ignorando dm irrelevante...")
+                else: 
+                    print("")
+                    print(label)
 
-                for word in word_list:
-                    if(word == "unread,"):
-                        print("Dm ainda não foi lida!")
-                        unread_messages.append(i)
+                    word_list = label.split()
+                    print(word_list)
 
-        return unread_messages
+                    for word in word_list:
+                        if(word == "unread,"):
+                            print("Dm ainda não foi lida!")
+                            unread_messages.append(i)
+
+            return unread_messages
+        else:
+            driver.get("https://discord.com/channels/@me")
     
     def sending_dm_messages(self, element):
         driver = self.driver
 
-        def send_message():
+        def send_message(element):
             element.click()
 
             msgs = np.array(driver.find_elements_by_class_name("messageContent-2qWWxC"))
@@ -97,6 +103,11 @@ class Client:
 
             response = chatbot_response(last_message)
 
+            print("")
+            print("RESPOSTA GERADA")
+            print(response)
+            print("")
+
             chat = driver.find_element_by_xpath("/html/body/div/div[2]/div/div[2]/div/div/div/div[2]/div[2]/div[2]/main/form/div/div[1]/div/div[3]/div[2]/div")
 
             chat.send_keys(response + Keys.RETURN)
@@ -110,20 +121,34 @@ class Client:
 cl = Client()
 cl.start()
 
-dms = cl.entering_dms()
-unread_dms = cl.getting_dm_count(dms)
-count = len(unread_dms)
+count = 0
 
-print("")
-print("LISTA DE DM'S")
-print(dms)
-print("")
+def message_counting():
+    dms = cl.entering_dms()
+    unread_dms = cl.getting_dm_count(dms)
 
-print("")
-print("FORAM CARREGADAS " + str(count) + " DM'S")
-print("")
+    print("")
+    print("LISTA DE DM'S")
+    print(dms)
+    print("")
 
-while count == 0:
-    cl.sending_dm_messages(unread_dms)
+    print("")
+    print("FORAM CARREGADAS " + str(len(unread_dms)) + " DM'S")
+    print("")
 
-cl.sending_group_messages()
+    return unread_dms
+
+while True:
+    dms_to_answer = message_counting()
+
+    while (len(dms_to_answer) < 1):
+        cl.sending_group_messages()
+
+        for i in xrange(100,0,-1):
+            sys.stdout.write("Esperando " + str(i)+' ' + " segundos")
+            sys.stdout.flush()
+            time.sleep(1)
+
+        message_counting()
+
+    cl.sending_dm_messages(dms_to_answer[0])
