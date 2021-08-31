@@ -34,11 +34,22 @@ class Client:
         time.sleep(.5)
 
         driver.find_element_by_xpath("/html/body/div/div[2]/div/div/div/div/form/div/div/div[1]/div[2]/button[2]").click()
+
+        time.sleep(5)
+
+        driver.find_element_by_xpath("/html/body/div/div[5]/div[2]/div/div/div/div[1]/div[2]/button").click()
     def sending_group_messages(self):
 
         driver = self.driver
 
         driver.get("https://discord.com/channels/706715940276142111/872163843802026074")
+
+        time.sleep(5)
+
+        closeButton = driver.find_element_by_class_name("backdrop-1wrmKB")
+
+        if(closeButton.isDisplayed() == True):
+            closeButton.click()
 
         message_list = ["oie, alguém pra conversar? mandem dm", "oie, me chamem na dm, vamo conversar", "oiii, alguém pra conversar na dm? me chama aí", "oieeee, me chamem na dm, vamo cvs"]
         conversation_init_message = random.choice(message_list)
