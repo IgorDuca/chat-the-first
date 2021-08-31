@@ -18,7 +18,7 @@ user_tokens = json.loads(open('user_tokens.json').read())
 
 class Client:
     def __init__(self):
-        self.driver = webdriver.Chrome("C:/Users/IGOR/chromedriver.exe")
+        self.driver = webdriver.Firefox()
         self.username = user_tokens["username"]
         self.password = user_tokens["password"]
     def start(self):
@@ -44,19 +44,18 @@ class Client:
 
         driver.get("https://discord.com/channels/706715940276142111/872163843802026074")
 
-        time.sleep(5)
-
-        closeButton = driver.find_element_by_class_name("backdrop-1wrmKB")
-
-        if(closeButton.isDisplayed() == True):
-            closeButton.click()
-
         message_list = ["oie, alguém pra conversar? mandem dm", "oie, me chamem na dm, vamo conversar", "oiii, alguém pra conversar na dm? me chama aí", "oieeee, me chamem na dm, vamo cvs"]
         conversation_init_message = random.choice(message_list)
 
-        driver = self.driver
+        print("")
+        print("INICIANDO CONVERSA")
+        print(conversation_init_message)
+        print("")
 
-        WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.CLASS_NAME, "slateTextArea-1Mkdgw"))).send_keys(conversation_init_message + Keys.RETURN)
+        text_area = WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.CLASS_NAME, "slateTextArea-1Mkdgw")))
+
+        text_area.send_keys(conversation_init_message)
+        text_area.send_keys(Keys.RETURN)
 
     def entering_dms(self):
 
@@ -132,34 +131,37 @@ class Client:
 cl = Client()
 cl.start()
 
-count = 0
+cl.sending_group_messages()
 
-def message_counting():
-    dms = cl.entering_dms()
-    unread_dms = cl.getting_dm_count(dms)
+# count = 0
 
-    print("")
-    print("LISTA DE DM'S")
-    print(dms)
-    print("")
+# def message_counting():
+#     dms = cl.entering_dms()
+#     unread_dms = cl.getting_dm_count(dms)
 
-    print("")
-    print("FORAM CARREGADAS " + str(len(unread_dms)) + " DM'S")
-    print("")
+#     print("")
+#     print("LISTA DE DM'S")
+#     print(dms)
+#     print("")
 
-    return unread_dms
+#     print("")
+#     print("FORAM CARREGADAS " + str(len(unread_dms)) + " DM'S")
+#     print("")
 
-while True:
-    dms_to_answer = message_counting()
+#     return unread_dms
 
-    while (len(dms_to_answer) < 1):
-        cl.sending_group_messages()
+# while True:
+#     dms_to_answer = message_counting()
 
-        for i in xrange(100,0,-1):
-            sys.stdout.write("Esperando " + str(i)+' ' + " segundos")
-            sys.stdout.flush()
-            time.sleep(1)
+#     while (len(dms_to_answer) < 1):
+#         cl.sending_group_messages()
 
-        message_counting()
+#         for remaining in range(100, 0, -1):
+#             sys.stdout.write("\r")
+#             sys.stdout.write("{:2d} segundos faltando.".format(remaining))
+#             sys.stdout.flush()
+#             time.sleep(1)
 
-    cl.sending_dm_messages(dms_to_answer[0])
+#         message_counting()
+
+#     cl.sending_dm_messages(dms_to_answer[0])
