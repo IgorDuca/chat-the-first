@@ -133,35 +133,35 @@ cl.start()
 
 cl.sending_group_messages()
 
-# count = 0
+count = 0
 
-# def message_counting():
-#     dms = cl.entering_dms()
-#     unread_dms = cl.getting_dm_count(dms)
+def message_counting():
+    dms = cl.entering_dms()
+    unread_dms = cl.getting_dm_count(dms)
 
-#     print("")
-#     print("LISTA DE DM'S")
-#     print(dms)
-#     print("")
+    print("")
+    print("LISTA DE DM'S")
+    print(dms)
+    print("")
 
-#     print("")
-#     print("FORAM CARREGADAS " + str(len(unread_dms)) + " DM'S")
-#     print("")
+    print("")
+    print("FORAM CARREGADAS " + str(len(unread_dms)) + " DM'S")
+    print("")
 
-#     return unread_dms
+    return unread_dms
 
-# while True:
-#     dms_to_answer = message_counting()
+while True:
+    dms_to_answer = message_counting()
 
-#     while (len(dms_to_answer) < 1):
-#         cl.sending_group_messages()
+    while (len(dms_to_answer) < 1):
+        cl.sending_group_messages()
 
-#         for remaining in range(100, 0, -1):
-#             sys.stdout.write("\r")
-#             sys.stdout.write("{:2d} segundos faltando.".format(remaining))
-#             sys.stdout.flush()
-#             time.sleep(1)
+        for remaining in range(100, 0, -1):
+            sys.stdout.write("\r")
+            sys.stdout.write("{:2d} segundos faltando.".format(remaining))
+            sys.stdout.flush()
+            time.sleep(1)
 
-#         message_counting()
+        message_counting()
 
-#     cl.sending_dm_messages(dms_to_answer[0])
+    cl.sending_dm_messages(dms_to_answer[0])
