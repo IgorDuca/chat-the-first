@@ -18,13 +18,13 @@ user_tokens = json.loads(open('user_tokens.json').read())
 
 class Client:
     def __init__(self):
-        self.driver = webdriver.Firefox()
+        self.driver = webdriver.Chrome("C:/Users/Igor/chromedriver.exe")
         self.username = user_tokens["username"]
         self.password = user_tokens["password"]
     def start(self):
         driver = self.driver
 
-        driver.get("https://discord.com/channels/706715940276142111/872163843802026074")
+        driver.get("https://discord.com/channels/@me")
 
         driver.implicitly_wait(10)
 
@@ -42,7 +42,7 @@ class Client:
 
         driver = self.driver
 
-        driver.get("https://discord.com/channels/706715940276142111/872163843802026074")
+        driver.get("https://discord.com/channels/311627659828527104/879662678530986034")
 
         message_list = ["oie, alguém pra conversar? mandem dm", "oie, me chamem na dm, vamo conversar", "oiii, alguém pra conversar na dm? me chama aí", "oieeee, me chamem na dm, vamo cvs"]
         conversation_init_message = random.choice(message_list)
@@ -130,8 +130,6 @@ class Client:
 
 cl = Client()
 cl.start()
-
-cl.sending_group_messages()
 
 count = 0
 

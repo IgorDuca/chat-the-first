@@ -445,3 +445,168 @@ JavaScript warning: https://discord.com/assets/14eeac52c9c5f0a9923a.js, line 381
 JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
 JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
 [Parent 19106, IPC I/O Parent] WARNING: FileDescriptorSet destroyed with unconsumed descriptors: file /build/firefox-RJh93w/firefox-91.0.2+build1/ipc/chromium/src/chrome/common/file_descriptor_set_posix.cc:19
+1630430701850	geckodriver	INFO	Listening on 127.0.0.1:42259
+1630430702839	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilerIWPfb"
+1630430709169	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilerIWPfb/search.json.mozlz4", (void 0)))
+1630430716467	Marionette	INFO	Listening on port 42923
+1630430716729	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+1630430780341	Marionette	INFO	Stopped listening on port 42923
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1630431265662	geckodriver	INFO	Listening on 127.0.0.1:32869
+1630431265666	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilekfS8ED"
+1630431267500	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilekfS8ED/search.json.mozlz4", (void 0)))
+1630431271659	Marionette	INFO	Listening on port 38701
+1630431271721	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+1630431406415	geckodriver	INFO	Listening on 127.0.0.1:54615
+1630431406419	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile3IRGbM"
+1630431408007	Marionette	INFO	Stopped listening on port 38701
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+1630431408070	Marionette	INFO	Marionette enabled
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[Parent 6274, IPC I/O Parent] WARNING: FileDescriptorSet destroyed with unconsumed descriptors: file /build/firefox-RJh93w/firefox-91.0.2+build1/ipc/chromium/src/chrome/common/file_descriptor_set_posix.cc:19
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile3IRGbM/search.json.mozlz4", (void 0)))
+1630431412087	Marionette	INFO	Listening on port 36481
+1630431412177	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+1630431446564	Marionette	INFO	Stopped listening on port 36481
+Marionette threw an error: TypeError: browsingContext.currentWindowGlobal is null
+getMarionetteCommandsActorProxy/get/<@chrome://remote/content/marionette/actors/MarionetteCommandsParent.jsm:326:29
+
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+[Parent 6773, IPC I/O Parent] WARNING: FileDescriptorSet destroyed with unconsumed descriptors: file /build/firefox-RJh93w/firefox-91.0.2+build1/ipc/chromium/src/chrome/common/file_descriptor_set_posix.cc:19
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1630455445019	geckodriver	INFO	Listening on 127.0.0.1:40573
+1630455446007	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilehcB47E"
+1630455452077	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilehcB47E/search.json.mozlz4", (void 0)))
+1630455459376	Marionette	INFO	Listening on port 45061
+1630455459753	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+1630455561265	Marionette	INFO	Stopped listening on port 45061
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1630456372280	geckodriver	INFO	Listening on 127.0.0.1:51623
+1630456372284	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileBKVIAd"
+1630456374136	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileBKVIAd/search.json.mozlz4", (void 0)))
+1630456378265	Marionette	INFO	Listening on port 41845
+1630456378348	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+1630456422399	Marionette	INFO	Stopped listening on port 41845
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1630456823244	geckodriver	INFO	Listening on 127.0.0.1:60437
+1630456823248	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileas0Mmq"
+1630456824965	Marionette	INFO	Marionette enabled
+1630456856730	geckodriver	INFO	Listening on 127.0.0.1:35087
+1630456856735	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileAIFR6p"
+1630456858324	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileAIFR6p/search.json.mozlz4", (void 0)))
+1630456861791	Marionette	INFO	Listening on port 43175
+1630456861866	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+1630456886278	Marionette	INFO	Stopped listening on port 43175
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1630456902297	geckodriver	INFO	Listening on 127.0.0.1:45831
+1630456902302	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilejJorZD"
+1630456903947	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilejJorZD/search.json.mozlz4", (void 0)))
+1630456907656	Marionette	INFO	Listening on port 35373
+1630456907766	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+JavaScript warning: https://discord.com/assets/ae05673871240182bd0f.js, line 3815: unreachable code after return statement
+1630456914945	Marionette	INFO	Stopped listening on port 35373
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
