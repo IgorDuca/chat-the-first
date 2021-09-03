@@ -42,7 +42,11 @@ class Client:
 
         driver = self.driver
 
-        driver.get("https://discord.com/channels/311627659828527104/879662678530986034")
+        urls = ["https://discord.com/channels/634770393382518826/706961605778341998", "https://discord.com/channels/634770393382518826/637067359424741377", "https://discord.com/channels/634770393382518826/851188671213731911"]
+
+        url = random.choice(urls)
+
+        driver.get(url)
 
         message_list = ["oie, alguém pra conversar? mandem dm", "oie, me chamem na dm, vamo conversar", "oiii, alguém pra conversar na dm? me chama aí", "oieeee, me chamem na dm, vamo cvs"]
         conversation_init_message = random.choice(message_list)
@@ -163,3 +167,9 @@ while True:
         message_counting()
 
     cl.sending_dm_messages(dms_to_answer[0])
+
+    for remaining in range(100, 0, -1):
+        sys.stdout.write("\r")
+        sys.stdout.write("{:2d} segundos faltando para reiniciar o processo.".format(remaining))
+        sys.stdout.flush()
+        time.sleep(1)
